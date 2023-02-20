@@ -67,10 +67,12 @@
                         <includes>
                             <!-- <include>**/MySqlTest1.java</include> -->
                             <!-- <include>**/MySqlTest2.java</include> -->
-                            <include>**/MySqlTest3.java</include>
+                            <!-- <include>**/MySqlTest3.java</include> -->
+                            <include>**/MySqlTest4.java</include>
                         </includes>
                         <excludes>
                             <exclude>**/BaseMySqlTest.java</exclude>
+                            <exclude>**/FlywayMySqlTest.java</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -83,6 +85,13 @@
                             <configFile>src/main/resources/application.properties</configFile>
                         </configFiles>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.flywaydb</groupId>
+                            <artifactId>flyway-mysql</artifactId>
+                            <version>9.8.1</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
